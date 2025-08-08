@@ -1,20 +1,18 @@
 ---
-import Logo from '../components/Logo.astro'
+import LogoPrincipal from '../components/LogoPrincipal.astro'
 ---
 
-<header>
-	<Logo />
-	<nav>
-		<ul>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-
-
+<header class=" flex justify-between items-center px-4 py-5 gap-4 mb-[40px]">
+	<LogoPrincipal />
+	<nav class="navegacion">
+		<ul class="flex items-center gap-4 justify-between text-muted font-medium">
+			<li><a class="underline underline-foreground" href=""></a>Inicio</li>
+			<li><a href="">Quienes Somos</a></li>
+			<li><a href="">Diseño de Servicios</a></li>
+			<li><a href="">Innovacion Empresarial</a></li>
+			<li><a href="">Diseño de Marca</a></li>
+			<li><a href="">Contacto</a></li>
+			<li><a href="">Preguntas Frecuentes</a></li>
 		</ul>
 	</nav>
 </header>

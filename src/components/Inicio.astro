@@ -1,6 +1,8 @@
 ---
 import imagen from '../../assets/IMG.png';
+import Layout from '../layouts/Layout.astro';
 ---
+<main>
 <section class="w-full px-4 flex justify-between gap-4">  
   <!--abajo estan los textos-->
    <section class="w-full max-w-[400px] h-auto grid gap-4 auto-rows-max pt-4 m-4">
@@ -22,10 +24,21 @@ import imagen from '../../assets/IMG.png';
     </div>
 </section>
 </section>
-<section class="px-4">
+<section class="px-4 py-16">
   
   <button type="button"
 class=" w-[180px] max-w-[180px] bg-primary text-foreground rounded-xl font-medium py-1 cursor-pointer hover:bg-primary/80 ">
   Diseño de Servicios
 </button>
 </section>
+
+</main>
+
+<style>
+  main {
+		padding-inline: 80px;
+		max-width: 1840px;
+		min-width: 500px;
+	
+	}
+</style>

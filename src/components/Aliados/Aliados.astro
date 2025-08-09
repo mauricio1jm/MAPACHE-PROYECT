@@ -13,19 +13,20 @@ import Mayam from '../../assets/colores.png';
         </section>
         <section class=" flex justify-between">
 
-    <section class="w-[400px] h-[50px] bg-amber-400">
+    <section class="w-[400px] h-[50px]">
         <h2 class="font-bold text-[#AC8178] mb-2 text-[30px]">Contactanos</h2>
         <h1 class="text-[46px]">Incrementa la <strong>experiencia</strong> de tus clientes!</h1>
     </section>
-    <section class="bg-amber-400 w-[300px] h-[500px] gap-16 text-center">
-        <form class="mb-2" id="formulario">
-    <h1>Formulario</h1>
+    <section class="w-[300px] gap-16 m-2 bg-amber-700">
+        <form class="m-2 h-[550px] bg-amber-300" id="formulario">
+    
     <p>Ingresa tus datos</p>
     <input type="text" name="nombre" placeholder="Ingresa tu usuario" />
     <p>Ingresa tus datos</p>
     <input type="text" name="cargo" placeholder="Dueño de negocio" />
     <p>Ingresa tus datos</p>
     <input type="number" name="edad" placeholder="Edad" />
+  
     <p>Ingresa tus datos</p>
     <select class="bg-amber-50" name="servicio">
         <option>Selecciona un servicio</option>
@@ -36,8 +37,11 @@ import Mayam from '../../assets/colores.png';
         <option>Quiero la radiografia finaciera</option>
         <option>Quiero el diagsnotico de Marca</option>
     </select>
-    <p>Ingresa tus datos</p>
+    <div class="bg-amber-950 py-16">
+         <p class="py-4">Ingresa tus datos</p>
     <textarea name="comentarios" placeholder="Escribe tus comentarios"></textarea>
+    </div>
+   
 
     
 </form>
@@ -60,7 +64,8 @@ import Mayam from '../../assets/colores.png';
         background-color: #fef3c7;
         color: #000;
         font-weight: 500;
-        padding: 2px;         
+        padding: 2px;   
+        border-radius: 6px;       
       
     }
     textarea{

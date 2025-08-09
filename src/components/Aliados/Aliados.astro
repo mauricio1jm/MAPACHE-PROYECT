@@ -1,29 +1,75 @@
 ---
 import Mayam from '../../assets/colores.png';
 ---
-<section class="w-full px-4 i gap-4">
-    <h1 class="text-[36px] leading-[54px] font-medium text-foreground/80 mb-2 ">
+<main>
+    <section class="w-full px-4 py-16 gap-4">
+    <h1 class="text-[36px] leading-[54px] font-bold text-foreground/70 mb-2 text-center">
         Aliados Estrategicos
     </h1>
     <section>
         <div class="w-[400px] h-[400px]">
             <img src={Mayam .src} alt="">
         </div>
-    </section>
-    <section>
-        <h2>Contactanos</h2>
-        <h1>Incrementa la <strong>experiencia</strong> de tus clientes!</h1>
-    </section>
-    <section class="bg-amber-400 w-[200px] h-[300px]">
-        <form class="" id="formulario">
-			<h1  class="">formulario</h1>
-			<input type="text" name="user" placeholder="Ingresa tu Usuario" />
-            <input type="email" name="email" placeholder="Ingresa tu Correo" />
-			<input type="number" name="edad" placeholder="Ingresa tu Edad" />
-			<input type="number" name="telefono" placeholder="Ingresa tu Telefono" />
-			<input type="text" name="direccion" placeholder="Ingresa tu Direccion" />
-			<button type="submit" form="user-form"> Ingresar </button>
-		</form>
+        </section>
+        <section class=" flex justify-between">
 
+    <section class="w-[400px] h-[50px] bg-amber-400">
+        <h2 class="font-bold text-[#AC8178] mb-2 text-[30px]">Contactanos</h2>
+        <h1 class="text-[46px]">Incrementa la <strong>experiencia</strong> de tus clientes!</h1>
     </section>
+    <section class="bg-amber-400 w-[300px] h-[500px] gap-16 text-center">
+        <form class="mb-2" id="formulario">
+    <h1>Formulario</h1>
+    <p>Ingresa tus datos</p>
+    <input type="text" name="nombre" placeholder="Ingresa tu usuario" />
+    <p>Ingresa tus datos</p>
+    <input type="text" name="cargo" placeholder="Dueño de negocio" />
+    <p>Ingresa tus datos</p>
+    <input type="number" name="edad" placeholder="Edad" />
+    <p>Ingresa tus datos</p>
+    <select class="bg-amber-50" name="servicio">
+        <option>Selecciona un servicio</option>
+        <option>Innovacion Empresarial</option>
+        <option>Diseno de Branding</option>
+        <option>Workshops Mapache</option>
+        <option>Quiero la prueba de usabilidad</option>
+        <option>Quiero la radiografia finaciera</option>
+        <option>Quiero el diagsnotico de Marca</option>
+    </select>
+    <p>Ingresa tus datos</p>
+    <textarea name="comentarios" placeholder="Escribe tus comentarios"></textarea>
+
+    
+</form>
+    </section>
+        </section>
+</main>
+
+    
 </section>
+
+<style>
+  main {
+		padding-inline: 80px;
+		max-width: 1840px;
+		min-width: 500px;
+	}
+
+ input{
+        border: 1px solid #ccc;  
+        background-color: #fef3c7;
+        color: #000;
+        font-weight: 500;
+        padding: 2px;         
+      
+    }
+    textarea{
+        background-color: #fef3c7;
+        color: #000;
+        font-weight: 500;
+        width: 250px;
+        height: 150px;
+        
+    }
+   
+</style>

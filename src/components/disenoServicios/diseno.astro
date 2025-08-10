@@ -1,0 +1,46 @@
+---
+import imageservicios from "../../assets/happy-clients-buying-poke-bowl-2022-09-29-21-15-22-utc.png";
+import mapachelogo from "../../assets/logo2.png";
+---
+
+<section class="bg-[#d0cfe6] p-8">
+  <div class="flex justify-around items-center gap-10 flex-wrap">
+    <div class="flex flex-col gap-7 max-w-xl">
+      <div class="ml-[-40px]">
+        <img
+          class="w-[190px] h-auto"
+          src={mapachelogo.src}
+          alt="Mapache Logo"
+        />
+      </div>
+
+      <div>
+        <strong class="text-2xl block">Servicio estrella</strong>
+        <h1 class="text-[50px] font-bold leading-tight">Diseño de servicios</h1>
+      </div>
+
+      <div class="text-base">
+        <p>Costo: $xx + IVA</p>
+        <p>Tiempo estimado: xxx dias habiles</p>
+        <p>Entregables: xxx</p>
+      </div>
+
+      <div>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 bg-[#8a8abb] text-[#fcfcff] px-4 py-1 rounded-4xl hover:bg-blue-700 w-76"
+        >
+          <span>¡Quiero un diagnostico de marca!</span>
+        </a>
+      </div>
+    </div>
+    <!-- imagen -->
+    <div class="p-2 mt-4">
+      <img
+        src={imageservicios.src}
+        alt="Imagen de servicios"
+        class="w-100 h-100 rounded-full object-cover"
+      />
+    </div>
+  </div>
+</section>

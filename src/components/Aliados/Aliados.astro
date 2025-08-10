@@ -2,23 +2,23 @@
 import Mayam from '../../assets/colores.png';
 ---
 <main class="px-20 max-w-full min-w-0">
-    <section class="w-full px-4 py-16 p-2">
-    <h1 class="text-[36px] leading-[54px] font-bold text-foreground/70 mb-2 p-4 text-center">
+    <section class="w-full px-4 py-16 p-4">
+    <h1 class="text-[40px] leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
         Aliados Estrategicos
     </h1>
-    <div class="pt-7">
-        <div class="w-[200px] h-[200px] border-2 p-2">
+    <div class="pt-4">
+        <div class="w-[250px] h-[250px] border-2 p-2">
             <img src={Mayam.src} alt="mayam">
         </div>
     </div>
-        <div class=" flex justify-center gap-16">
+        <section class=" flex justify-center pt-16 ">
 
-    <div class="w-[500px] h-[50px] pt-20">
-        <h2 class="font-bold text-[#AC8178] text-[30px]">Contáctanos</h2>
-        <h1 class="text-[65px] text-foreground/80 ">Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+    <div class="w-[400px] h-[50px] ">
+        <h2 class="font-medium text-[#AC8178] text-[30px]">Contáctanos</h2>
+        <h1 class="text-[50px] text-foreground/80 ">Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
     </div>
    
-        <form class=" h-[690px] w-[300px] ml-auto mr-auto m-2 pt-20 " id="formulario">
+        <form class=" h-[600px] w-[220px] ml-auto mr-auto m-2" id="formulario">
     
     <p>Con quien tenemos el gusto</p>
     <input type="text" name="nombre" placeholder="Nombre Completo" />
@@ -28,7 +28,7 @@ import Mayam from '../../assets/colores.png';
     <input type="email" name="correo" placeholder="@" />
   
     <p>Ingresa tus datos</p>
-    <select class="text-foreground/100 w-full border-2 rounded-b" >
+    <select class="text-foreground/100  text-[12px] w-full border-2 rounded-b" >
         <option>Servicio Mapache</option>
         <option>Innovación Empresarial</option>
         <option>Diseño de Branding</option>
@@ -45,7 +45,7 @@ import Mayam from '../../assets/colores.png';
    
 </form>
    
-        </div>
+        </section>
 </section>
 </main>
 
@@ -55,9 +55,10 @@ import Mayam from '../../assets/colores.png';
 
  input{
         border: 1px solid #ccc;  
-        padding: 2px 18px 2px 12px;  
+        padding: 3px 18px 3px 12px;  
         border-radius: 6px;       
         width: 100%;
+        font-size: 12px;
     }
     textarea{
        
@@ -72,12 +73,12 @@ import Mayam from '../../assets/colores.png';
         color:#9b9898;
         padding-top: 20px;
         padding-bottom:2px;
-        font-size: 14px;
+        font-size: 10px;
        
     }
     option{
         color: #9b9898;
-        padding: 0 18px 0 12px;  
+        padding: 3px 18px 3px 12px;  
         border-radius: 6px;       
     }
    

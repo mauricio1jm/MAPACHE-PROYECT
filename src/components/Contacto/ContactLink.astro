@@ -1,0 +1,19 @@
+---
+type Props = {
+	href: string;
+	class?: string;
+};
+
+const { class: className, href } = Astro.props;
+
+---
+
+<div
+	class:list={[
+		'flex justify-center items-center bg-icons rounded-3xl w-[45px] h-[45px]',
+		className,
+	]}
+	><a class="cursor: pointer hover:scale-110 transition" href={href} target="_blank">
+		<slot />
+	</a>
+</div>

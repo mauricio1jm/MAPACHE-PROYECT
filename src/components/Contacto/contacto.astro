@@ -1,0 +1,49 @@
+---
+import Instagram from "../iconos/Instagram.astro"
+import Facebook from "../iconos/Facebook.astro"
+import Whatsapp from "../iconos/Whatsapp.astro"
+import Behance from "../iconos/Behance.astro"
+import Linkedin from "../iconos/Linkedin.astro"
+import Envelope from "../iconos/Envelope.astro"
+import ContactLink from "../Contacto/ContactLink.astro"
+---
+
+<footer class="bg-[#9e9797] py-8">
+  <div class="flex flex-col items-end px-8">
+    <div class="flex gap-4 mb-6 ">
+  <div class="flex gap-6 mb-6 justify-center px-24">
+  <ContactLink href="">
+    <Whatsapp class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+
+  <ContactLink href="">
+    <Instagram class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+
+  <ContactLink href="">
+    <Facebook class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+
+  <ContactLink href="">
+    <Envelope class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+
+  <ContactLink href="">
+    <Linkedin class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+
+  <ContactLink href="">
+    <Behance class="w-[40px] h-[40px] bg-btn rounded-full p-2" />
+  </ContactLink>
+</div>
+
+    </div>
+    <div class="text-background text-3xl px-18">
+      <p>contacto@mapache.com.mx</p>
+      <p>Todos los derechos reservados</p>
+      <p>para © 2023 Mapache ®</p>
+      <p>Políticas de privacidad</p>
+      <p>Términos de uso</p>
+    </div>
+  </div>
+</footer>

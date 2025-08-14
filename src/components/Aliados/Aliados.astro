@@ -1,91 +1,95 @@
 ---
 import Mayam from '../../assets/colores.png';
 ---
-<main>
-    <section class="w-full px-4 py-16 p-2">
-    <h1 class="text-[36px] leading-[54px] font-bold text-foreground/70 mb-2 p-4 text-center">
+<main class="px-20 max-w-full min-w-0 m-8 p-8 text-sm">
+    <section id="aliados" class="w-full px-4 space-y-8 gap-8">
+    <h1 class="text-4xl leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
         Aliados Estrategicos
     </h1>
-    <section class="pt-7">
-        <div class="w-[200px] h-[200px] border-2 p-2">
-            <img src={Mayam .src} alt="">
+    <div class="pt-4 m-4">
+        <div class="w-[250px] h-[250px] border-2 p-2">
+            <img src={Mayam.src} alt="mayam">
         </div>
-        </section>
-        <section class=" flex justify-center gap-16">
+    </div>
+        <section class="flex flex-wrap items-start justify-center gap-4 p-4 ">
 
-    <section class="w-[500px] h-[50px] pt-18">
-        <h2 class="font-bold text-[#AC8178] text-[30px]">Contáctanos</h2>
-        <h1 class="text-[65px] text-foreground/80 ">Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
-    </section>
+    <div class="max-w-md  w-[350px]">
+        <h2 class="font-medium text-[#AC8178] text-2xl">Contáctanos</h2>
+        <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+    </div>
    
-        <form class=" h-[690px] w-[300px] ml-auto mr-auto m-2 pt-18 " id="formulario">
+        <form class=" h-[auto] w-[220px] ml-auto mr-auto m-2 space-y-4"  id="formulario">
     
-    <p>Con quien tenemos el gusto</p>
+    <label>Con quien tenemos el gusto</label>
     <input type="text" name="nombre" placeholder="Nombre Completo" />
-    <p>Cargo empresarial</p>
+    <label>Cargo empresarial</label>
     <input type="text" name="cargo" placeholder="Dueño de negocio" />
-    <p>Correo eletronico</p>
+    <label>Correo electrónico</label>
     <input type="email" name="correo" placeholder="@" />
   
-    <p>Ingresa tus datos</p>
-    <select class="text-foreground/80 fond-bold" >
-        <option>Servicio Mapache</option>
-        <option>Innovacion Empresarial</option>
-        <option>Diseno de Branding</option>
-        <option>Workshops Mapache</option>
-        <option>Quiero la prueba de usabilidad</option>
-        <option>Quiero la radiografia finaciera</option>
-        <option>Quiero el diagsnotico de Marca</option>
-    </select>
-    
-    <div class=" pt-[200px]">
-        <p class="">Comentariois</p>
-    <textarea class="p-3" name="comentarios" placeholder="¿Como podemos ayudarte?"></textarea>
+    <div>
+        <label>Ingresa tus datos</label>
+          <select name="formulario" class="text-foreground/70  text-[12px] w-full border-2 rounded-b p-1" >
+              <option>Servicio Mapache</option>
+              <option>Innovación Empresarial</option>
+              <option>Diseño de Branding</option>
+              <option>Workshops Mapache</option>
+              <option>Quiero la prueba de usabilidad</option>
+              <option>Quiero la radiografía financiera</option>
+              <option>Quiero el diagnóstico de Marca</option>
+          </select>
     </div>
+
+    <div>
+        <div class="space-y-1">
+             <label class="">Comentarios</label>
+            <textarea class="p-3" name="comentarios" placeholder="¿Cómo podemos ayudarte?"></textarea>
+        </div>
+    </div>
+    
+     <button type="submit" class="">
+    Enviar
+  </button>
    
 </form>
    
         </section>
-</section>
+    </section>
 </main>
 
 
 <style>
-  main {
-		padding-inline: 80px;
-		max-width: auto;
-		min-width: 500px;
-        
-	}
+ 
 
  input{
         border: 1px solid #ccc;  
-        padding: 2px 18px 2px 12px;
-           
-        border-radius: 6px;       
+        padding: 5px;
+        border-radius: 5px;       
         width: 100%;
+        font-size: 12px;
     }
     textarea{
        
         color: #000;
-        width: auto;
+        width: 100%;
         height: 100px;
         border-radius: 6px;  
         border: 1px solid #ccc;  
+        font-size: 12px;
         
     }
-    p{
+    label{
         color:#9b9898;
-        padding-top: 20px;
-        padding-bottom:2px;
-        font-size: 14px;
+
+        font-size: 10px;
        
     }
     option{
-        color: #25282A/100;
-        padding: 0 18px 0 12px;  
+        color: #9b9898;
+       
         border-radius: 6px;       
-        width: auto;
     }
-   
+    select{
+        border: 1px solid #ccc;
+    }
 </style>

@@ -1,7 +1,8 @@
----
----
 
-let HelpCards = [
+---
+import
+
+let letterCards = [
 	{
 		imgSrc:
 			'png de la imagen',
@@ -32,4 +33,19 @@ let HelpCards = [
 	},
 ];
 ---
-
+<main>
+		<section>
+			{
+				letterCards.map(function (lettercard) {
+					return (
+						<letterCard
+							imgSrc={lettercard.imgSrc}
+							title={lettercard.title}
+							body={lettercard.body}
+							price={lettercard.price}
+						/>
+					);
+				})
+			}
+		</section>
+	</main>

@@ -1,4 +1,12 @@
 ---
+type Props = {
+	imgSrc: string;
+	title: string;
+	subtitle: string;
+	letter: string;
+};
+
+let { title, imgSrc, subtitle, letter } = Astro.props;
 ---
 
 <section id="ayudamos" class="w-auto h-auto" >
@@ -10,7 +18,7 @@
     
     <div class="w-[300px] h-[400px] m-16 rounded-4xl flex flex-col justity-center items-center p-2 shadow-xl">
         <h2 class="text-center font-bold py-4 text-[#7b8c42] text-3xl">
-                Diseño de onboarding
+                {title}
             </h2>
 
             <p class="text-muted py-2 text-[12px] m-[30px]">

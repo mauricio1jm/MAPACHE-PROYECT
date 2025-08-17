@@ -1,34 +1,31 @@
 ---
-import Button from '../Button.astro';
-
 type Props = {
-	imgSrc: string;
 	title: string;
-	subtitle: string;
 	letter: string;
 };
 
-let { title, imgSrc, subtitle, letter } = Astro.props;
+let { title, letter } = Astro.props;
+
+import Button from '../Button.astro';
 ---
 
 <section id="ayudamos" class="w-auto h-auto" >
     <h1 class="flex justify-center font-bold text-foreground/60 text-5xl">Te ayudamos con:</h1>
 
-
 <!-- Card 1 -->
 <div class="grid place-items-center grid-cols-1 md:grid-cols-2">
     
-    <div class="items-center">
-        <h2 class="">
+    <div class="w-[300px] h-[500px] m-16 rounded-4xl flex flex-col p-8 shadow-xl">
+        <h2 class="text-center text-amber-950">
                 {title}
             </h2>
-
             <p class="">
                 {letter}
             </p>
 
             <Button label="Contactar equipo Mapache">
     </div>
+
     <div class="items-center">
         <h2 class="">
                 {title}
@@ -74,14 +71,13 @@ let { title, imgSrc, subtitle, letter } = Astro.props;
         <h2 class="text-center font-bold py-4 text-[#8987C0] text-3xl">Asistentes Virtuales IA para Negocios</h2>
         
   
-    <strong class="text-1xl">Atención al cliente</strong>
+ 
         <p>-Manejo de reservaciones</p>
         <p>-Difusión de eventos</p>
         <p>-Programa de lealtad</p>
         <p>-Canocimiento de menú</p>
         
 
-    <strong class="text-1xl">Capacidades Técnicas:</strong>
         <p>-Lectura y análisis de imágenes</p>
         <p>-Respuesta en texto y voz</p>
         <p>-Interpretación de documentos</p>
@@ -105,6 +101,8 @@ let { title, imgSrc, subtitle, letter } = Astro.props;
         color: #b5b5b5;
         font-size: 12px;
     }
+
+     
 
 </style>
 

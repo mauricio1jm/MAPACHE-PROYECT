@@ -1,5 +1,7 @@
+---
+import Ayuda from '../Ayuda/Ayuda.astro';
 
-let LetterCards = [
+let letterCards = [
 	{
 		imgSrc:
 			'png de la imagen',
@@ -38,8 +40,8 @@ let LetterCards = [
 						<letterCard
 							imgSrc={lettercard.imgSrc}
 							title={lettercard.title}
-							body={lettercard.body}
-							price={lettercard.price}
+							body={lettercard.subtitle}
+							price={lettercard.letter}
 						/>
 					);
 				})

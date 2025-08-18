@@ -1,0 +1,45 @@
+---
+import Ayuda from '../components/Ayuda/Ayuda.astro';
+
+
+let AyudasCards = [
+	{
+		title: 'Diseño de onboarding',
+		letter: ' Dar la bienvenida adecuada, con lineamientos y manuales claros con obligaciones y responsabilidades bien definidas, perminte al colaborador integrarse con confianza al equipo, comprender su rol desde inicio y alinearse con los procesos de la empresa fortaleciendo la cultura organizacional y el desempeño desde el primer dia.',
+	},
+	{
+		
+		title: 'Diseño de embajador de Marca',
+		letter: 'Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia de tu atención excepcional, gestiona la agenda de reservaciones, comunica promociones y crea conexiones memorables con tus clientes. Eleva la experiencia y fortalece la identidad de tu marca desde el primer contacto.',
+	},
+	{
+		
+		title: 'Capacitación para nuevos colaboradores',
+		letter: 'h',
+	},
+	{
+		
+		title: 'Asistentes Virtuales IA para Negocios',
+		letter: 'j ',
+	},
+];
+---
+<main>
+		<section>
+			{
+				AyudasCards.map(function (Ayudacard)  {
+					return (
+						<Ayuda
+							title={Ayudacard.title}
+							letter={Ayudacard.letter}
+						/>
+					);
+				})
+			}
+		</section>
+</main>
+
+
+<style>
+	
+</style>

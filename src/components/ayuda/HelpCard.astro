@@ -1,0 +1,23 @@
+---
+import Button from '../Button.astro';
+
+type Props = {
+	title: string;
+	titleClass?: string;
+	body: string;
+};
+
+let { title, body, titleClass } = Astro.props;
+---
+
+<div
+	class="px-8 pt-6 pb-4 rounded-3xl shadow-md shadow-gray-400/80 max-w-[340px] min-h-[420px] flex flex-col items-center gap-6">
+	<h2 class:list={['text-xl font-semibold text-center', titleClass]}>
+		{title}
+	</h2>
+	<p class="flex-1 text-[15px] leading-[20px] text-foreground/80 text-pretty">
+		{body}
+	</p>
+
+	<Button label="Contactar equipo Mapache" />
+</div>

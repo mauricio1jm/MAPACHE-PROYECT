@@ -8,12 +8,14 @@ const { class: className, href } = Astro.props;
 
 ---
 
-<div
+<a
 	class:list={[
-		'flex justify-center items-center bg-[#fcdbc9] rounded-3xl w-[47px] h-[47px]',
+		'flex justify-center items-center round bg-[#fcdbc9] w-[47px] h-[47px] cursor: pointer hover:scale-110 transition rounded-3xl'
+		,
 		className,
 	]}
-	><a class="cursor: pointer hover:scale-110 transition" href={href} target="_blank">
+	href={href} target="_blank"
+	>
 		<slot />
 	</a>
-</div>
+

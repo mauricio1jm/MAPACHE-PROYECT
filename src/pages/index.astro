@@ -1,43 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav/nav.astro';
-import Inicio from '../components/Inicio/Inicio.astro';
-import DServicio from '../components/Servicios/DServicio.astro';
-import Ayuda from '../components/Ayuda/Ayuda.astro';
-import Marcas from '../components/Marcas/marcas.astro';
-import Aliados from '../components/Aliados/Aliados.astro';
-import Indicadores from '../components/indicadores/indicadores.astro';
-import DisenoServicios from '../components/disenoServicios/diseno.astro'
-import Contacto from '../components/Contacto/Contacto.astro';
-import Scroll from '../components/Inicio/scroll.astro';
-
-
+import Layout from '@/layouts/Layout.astro';
+import Nav from '@/components/nav/nav.astro';
+import Inicio from '@/components/inicio/Inicio.astro';
+import DServicio from '@/components/Servicios/DServicio.astro';
+import Ayuda from '@/components/ayuda/Ayuda.astro';
+import Marcas from '@/components/Marcas/marcas.astro';
+import Aliados from '@/components/Aliados/Aliados.astro';
+import Indicadores from '@/components/indicadores/indicadores.astro';
+import DisenoServicios from '@/components/disenoServicios/diseno.astro';
+import Contacto from '@/components/Contacto/contacto.astro';
+// import Scroll from '@/components/inicio/scroll.astro';
+import Base from '@/components/Base.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-
-		<Nav />
-		<Inicio />
-		<DServicio/>
-		<Indicadores />
-		<Ayuda />
-		<Marcas />
-		<DisenoServicios />
-		<Aliados />
-		<Contacto />
-
+	<Nav />
+	<Inicio />
+	<DServicio />
+	<Indicadores />
+	<!-- <Ayuda /> -->
+	<Base />
+	<Marcas />
+	<DisenoServicios />
+	<Aliados />
+	<Contacto />
 </Layout>
 <style>
 	main {
 		padding-inline: 80px;
 		max-width: 1840px;
 		min-width: 500px;
-	
 	}
 </style>
-
-
-

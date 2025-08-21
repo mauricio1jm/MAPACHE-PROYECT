@@ -1,55 +1,52 @@
 ---
-type Props = {
-	title: string;
-	letter: string;
-};
-
-let { title, letter } = Astro.props;
-
 import Button from '../Button.astro';
 ---
 
 <section id="ayudamos" class="w-auto h-auto" >
-    <h1 class="flex justify-center font-bold text-foreground/60 text-5xl">Te ayudamos con:</h1>
+    <h1 class="flex justify-center font-bold text-foreground/60 text-5xl m-12">Te ayudamos con:</h1>
 
-<!-- Card 1 -->
-<div class="grid place-items-center grid-cols-1 md:grid-cols-2">
-    
-    <div class="w-[300px] h-[500px] m-16 rounded-4xl flex flex-col p-8 shadow-xl">
-        <h2 class="text-center text-amber-950">
-                {title}
-            </h2>
-            <p class="">
-                {letter}
+
+    <!-- Ayuda 1 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-20 px-6 max-w-3xl mx-auto">
+    <div class="rounded-4xl flex flex-col p-8 shadow-xl space-y-7">
+        <h2 class="text-center font-bold mb-6 text-[#7b8c42] text-2xl mx-2">Diseño de onboarding</h2>
+
+        <p>Dar la bienvenida adecuada, con lineaminetos y manuales claros con
+                        obligaciones y responsabilidades bien definidas, permite al colaborador integrarse con confianza 
+                        al equipo, comprender su rol desde el inicio y alinearse con los procesos de la empresa fortaleciendo
+                        la cultura organizacional y el desempeño desde el primer dia.
             </p>
-
-            <Button label="Contactar equipo Mapache">
+            <div  class="flex justify-center items-center m-4">
+                <Button label="Contactar equipo Mapache">
+            </div>
     </div>
 
-    <div class="items-center">
-        <h2 class="">
-                {title}
-            </h2>
-            <p class="">
-                {letter}
+    <div class="rounded-4xl flex flex-col p-8 shadow-xl space-y-10">
+        <h2 class="text-center font-bold mb-6 text-[#8987C0] text-2xl">Diseño de embajador de Marca</h2>
+            <p>Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia
+                de tu atención excepcional, gestiona la agenda de reservaciones, comunica promociones y crea
+                conexiones memorables con tus clientes. Eleva la experiencia y fortalece la identidad de tu
+                marca desde el primer contacto
             </p>
 
-            <Button label="Contactar equipo Mapache">
+            <div  class="flex justify-center items-center m-4">
+                <Button label="Contactar equipo Mapache">
+            </div>
                   
     </div> 
 </div>
 
 
-<!-- Card 2 -->
+<!-- Ayuda 2 -->
 
-<h1 class="text-center text-5xl font-bold text-foreground/60 ">Te ayudamos con:</h1>
+<h1 class="text-center text-5xl font-bold text-foreground/60 m-12">Te ayudamos con:</h1>
 
-<div class="grid place-items-center grid-cols-1 md:grid-cols-2">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-20 px-6 max-w-3xl mx-auto">
     
-    <div class="w-[300px] h-[500px] m-16 rounded-4xl flex flex-col p-8 shadow-xl">
-        <h2 class="text-center font-bold py-4 text-[#7b8c42] text-3xl" >Capacitación para nuevos colaboradores</h2>
-        <strong class="text-1xl">Integración con sistemas existentes:</strong>    
+    <div class="rounded-4xl flex flex-col p-8 shadow-xl">
+        <h2 class="text-center font-bold mb-6 text-[#7b8c42] text-2xl" >Capacitación para nuevos colaboradores</h2>
         
+        <h6 class="text-1xl text-foreground/60 font-medium">Integración con sistemas existentes:</h6>    
             <p>-Bienvenida y presentación del restaurante (historia, concepto, valores)</li>
             <p>-Organigrama y estructura jerárquica</p>
             <p>-Políticas internas y código de conducta</p>
@@ -67,17 +64,15 @@ import Button from '../Button.astro';
     </div>
 
 
-    <div class="w-[300px] h-[500px] m-16 rounded-4xl flex flex-col p-8 shadow-xl">
-        <h2 class="text-center font-bold py-4 text-[#8987C0] text-3xl">Asistentes Virtuales IA para Negocios</h2>
-        
-  
- 
+    <div class=" rounded-4xl flex flex-col p-8 shadow-xl ">
+        <h2 class="text-center font-bold mb-6 text-[#8987C0] text-2xl">Asistentes Virtuales IA para Negocios</h2>
+        <h6 class="text-1xl text-foreground/60 font-medium">Atención al cliente:</h6>
         <p>-Manejo de reservaciones</p>
         <p>-Difusión de eventos</p>
         <p>-Programa de lealtad</p>
-        <p>-Canocimiento de menú</p>
+        <p class="pb-2">-Canocimiento de menú</p>
         
-
+        <h6 class="text-1xl text-foreground/60 font-medium">Capacidades Técnicas:</h6>
         <p>-Lectura y análisis de imágenes</p>
         <p>-Respuesta en texto y voz</p>
         <p>-Interpretación de documentos</p>
@@ -100,9 +95,9 @@ import Button from '../Button.astro';
      p {
         color: #b5b5b5;
         font-size: 12px;
+        
     }
 
      
 
 </style>
-

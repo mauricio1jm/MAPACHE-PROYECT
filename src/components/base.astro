@@ -1,25 +1,45 @@
 ---
-import Card from '../components/Ayuda/Ayuda.astro';
----
+import Ayuda from '../components/Ayuda/Ayuda.astro';
 
-<html lang="es">
-  <head>
-    <title>Ejemplo Cards con Astro</title>
-  </head>
-  <body>
-    <h1>Mis Tarjetas</h1>
-    <div style="display: flex; flex-wrap: wrap;">
-      <Card 
-        title="Astro Card"
-        image="https://astro.build/assets/press/astro-icon-light.svg"
-        description="Esta es una tarjeta hecha con Astro."
-        link="https://astro.build/"
-      />
-      <Card 
-        title="Otra Card"
-        image="https://images.unsplash.com/photo-1465101046530-73398c7f28ca"
-        description="Puedes reutilizar este componente para mostrar diferentes contenidos."
-      />
-    </div>
-  </body>
-</html>
+
+let AyudasCards = [
+	{
+		title: 'Diseño de onboarding',
+		letter: ' Dar la bienvenida adecuada, con lineamientos y manuales claros con obligaciones y responsabilidades bien definidas, perminte al colaborador integrarse con confianza al equipo, comprender su rol desde inicio y alinearse con los procesos de la empresa fortaleciendo la cultura organizacional y el desempeño desde el primer dia.',
+	},
+	{
+		
+		title: 'Diseño de embajador de Marca',
+		letter: 'Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia de tu atención excepcional, gestiona la agenda de reservaciones, comunica promociones y crea conexiones memorables con tus clientes. Eleva la experiencia y fortalece la identidad de tu marca desde el primer contacto.',
+	},
+	{
+		
+		title: 'Capacitación para nuevos colaboradores',
+		letter: 'h',
+	},
+	{
+		
+		title: 'Asistentes Virtuales IA para Negocios',
+		letter: 'j ',
+	},
+];
+---
+<main>
+		<section>
+			{
+				AyudasCards.map(function (Ayudacard)  {
+					return (
+						<Ayuda
+							title={Ayudacard.title}
+							letter={Ayudacard.letter}
+						/>
+					);
+				})
+			}
+		</section>
+</main>
+
+
+<style>
+	
+</style>

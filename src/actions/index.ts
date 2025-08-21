@@ -7,19 +7,37 @@ const createNewContacto = defineAction({
         name: z.string(),
         cargo: z.string(),
         email: z.string().email(), 
+        select: z.array(z.string()).default(['Servicio Mapache']),
+        comentarios: z.string().optional()
+
        
     }),
     accept: "form",
-    handler:({name}) => {
+    handler:({name,cargo,email,select,comentarios}) => {
         if (name == null) {
             return new ActionError({
                 message:"Name is required",
                 code: "BAD_REQUEST"
-            })
+            }
+        )
+        }
+        if (cargo == null) {
+            return new ActionError({
+                message:"Name is required",
+                code: "BAD_REQUEST"
+            }
+        )
+        }
+        if ( email== null) {
+            return new ActionError({
+                message:"Name is required",
+                code: "BAD_REQUEST"
+            }
+        )
         }
 
     console.log("username", name);
-    const Message = `Hello ${name},  welcome to Astro Actions!`;
+    const Message = `Hello ${name}, welcome to Astro Actions! con el cargo ${cargo} y el correo ${email} que necesitas para ${select.join(", ")}. Comentarios: ${comentarios || "Ninguno"}.`;
      return Message
     }
    

@@ -9,8 +9,8 @@ let { title, letter } = Astro.props;
 import Button from '../Button.astro';
 ---
 
-<section id="ayudamos" class="w-auto h-auto" >
-    <h1 class="flex justify-center font-bold text-foreground/60 text-5xl">Te ayudamos con:</h1>
+<div class="w-[300px] min-h-[400px] m-4 rounded-4xl flex flex-col justify-start items-center p-4 shadow-xl bg-white">
+  <h2 class="text-center font-bold py-4 text-[#7b8c42] text-2xl">{title}</h2>
 
 <!-- Card 1 -->
 <div class="grid place-items-center grid-cols-1 md:grid-cols-2">

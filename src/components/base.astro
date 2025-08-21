@@ -1,0 +1,64 @@
+---
+import HelpCard from './Ayuda/HelpCard.astro';
+
+let AyudasCards = [
+	{
+		title: 'Diseño de onboarding',
+		body: ' Dar la bienvenida adecuada, con lineamientos y manuales claros con obligaciones y responsabilidades bien definidas, perminte al colaborador integrarse con confianza al equipo, comprender su rol desde inicio y alinearse con los procesos de la empresa fortaleciendo la cultura organizacional y el desempeño desde el primer dia.',
+		titleClass: 'text-[#7b8c42]',
+	},
+	{
+		title: 'Diseño de embajador de Marca',
+		body: 'Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia de tu atención excepcional, gestiona la agenda de reservaciones, comunica promociones y crea conexiones memorables con tus clientes. Eleva la experiencia y fortalece la identidad de tu marca desde el primer contacto.',
+		titleClass: 'text-[#8987c0]',
+	},
+	 {
+	 	title: 'Capacitación para nuevos colaboradores',
+		strong: 'Integración con sistemas existentes:',
+	 	list: ['-Bienvenida y presentación del restaurante (historia, concept, valores)',
+      				'-Organigrama y estructura jerárquica',
+      				'-Políticas internas y código de conducta',
+      				'-Capacitación operativa por área',
+      				'-Reporte de asistencias y cumplimiento de tareas',
+	  				'-Conexión a bases de datos empresariales',
+	  				'-Integración con CRM, ERP, POS, y otros sistemas',
+	  				'-Acceso a inventarios y catálogos en tiempo real'],
+		titleClass: 'text-[#7b8c42]',
+	 },
+	 {
+	 	title: 'Asistentes Virtuales IA para Negocios',
+		strong: 'Atención al cliente:',
+	 	list: ['-Manejo de reservaciones',
+	  				'-Difusión de eventos',
+	  				'-Programa de lealtad',	
+	  				'-Canocimiento de menú',],
+
+		strong2: 'Capacidades Técnicas:',
+	  	list2:	['-Lectura y análisis de imágenes',
+	  				'-Respuesta en texto y voz',
+	  				'-Interpretación de documentos',
+	  				'-Identidad visual acorde a la marca',
+	  				'-Voz personalidad con el tono adecuado para la marca',
+	  				'-Personalidad y estilo comunicativo ajustado a cada negocio'],
+					titleClass: 'text-[#8987c0]',
+	 },
+];
+---
+
+<main>
+	<section id="ayudamos">
+		<h1 class="flex justify-center font-bold text-foreground/60 text-5xl"
+			>Te ayudamos con:</h1>
+		<div class="grid place-items-center grid-cols-1 md:grid-cols-2 gap-6">
+			{
+				AyudasCards.map(function (info) {
+					return <HelpCard {...info} />;
+					// return <Ayuda title={Ayudacard.title} letter={Ayudacard.letter} />;
+				})
+			}
+		</div>
+		
+	</section>
+</main>
+
+<style></style>

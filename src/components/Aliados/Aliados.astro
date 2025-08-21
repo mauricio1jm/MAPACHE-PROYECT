@@ -2,7 +2,7 @@
 import { actions, } from 'astro:actions';
 import Mayam from '../../assets/mapache 2.png';
 const result = Astro.getActionResult(actions.createNewContacto);
-console.log('Gretting Action Result::', result);
+
  
 ---
 <main class="px-20 max-w-full min-w-0 m-8 p-8 text-sm">
@@ -15,22 +15,25 @@ console.log('Gretting Action Result::', result);
             <img src={Mayam.src} alt="mayam">
         </div>
     </div>
-        <section class="flex flex-wrap items-start justify-center gap-4 p-4 ">
+    
+        <section class="flex flex-wrap items-start justify-center gap-4 p-4 bg- ">
 
-    <div class="max-w-md  w-[350px]">
+    <div class="max-w-md w-[350px] space-y-6 ">
         <h2 class="font-medium text-[#AC8178] text-2xl">Contáctanos</h2>
-        <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+        <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 sa ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+       
+   
     </div>
    
         <form method="POST"   id="formulario" action={actions.createNewContacto}
-        class=" h-[auto] w-[280px] ml-auto mr-auto m-2 space-y-8" >
+        class=" h-[auto] w-[280px] ml-auto mr-auto m-2 space-y-8 items-center">
     
     <label for="username">Con quien tenemos el gusto</label>
     <input type="text" name="name" placeholder="Nombre Completo" required />
     <label for="cargo">Cargo empresarial</label>
-    <input type="text" name="cargo" placeholder="Dueño de negocio"/>
+    <input type="text" name="cargo" placeholder="Dueño de negocio"required/>
     <label for="email">Correo electrónico</label>
-    <input type="email" name="email" placeholder="@"/>
+    <input type="email" name="email" placeholder="@" required/>
     <div>
         <label for="select">Ingresa tus datos</label>
           <select name="select" class="text-foreground/70  text-[12px] w-full border-2 rounded-b p-1" >
@@ -54,10 +57,12 @@ console.log('Gretting Action Result::', result);
    <button form="formulario"
 	type="submit" 
 	class=`flex items-center gap-2 w-auto max-w-[480px] rounded-2xl font-medium py-1 cursor-pointer px-4 hover:opacity-80 bg-primary text-foreground`>
-	enviar
+	Contactar con el equipo
 </button>
    
 </form>
+
+<div id="mensaje" class=" text-center text-sm mt-4 p-4 w-full rounded-b border-2 border-muted/70 "></div>
    
         </section>
     </section>
@@ -103,17 +108,20 @@ console.log('Gretting Action Result::', result);
 import { actions } from "astro:actions";
 
      const form = document.getElementById('formulario') as HTMLFormElement;
+     const mensaje = document.getElementById("mensaje");
 
     form?.addEventListener ("submit", async (ev) => {
        ev.preventDefault();
        const formData = new FormData(form);
        
      const { data, error } = await actions.createNewContacto(formData);
-     if (error){
-        console.error(error);
-         return;
-     }
-       console.log(data);
+    
+    console.log(data);
+    if (mensaje) {
+      mensaje.innerHTML = `✅ ¡Gracias ${formData.get("name")} ! Hemos recibido tu información.`;
+    }
+
+    form.reset();
     });
 
 </script>

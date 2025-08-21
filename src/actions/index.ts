@@ -23,20 +23,20 @@ const createNewContacto = defineAction({
         }
         if (cargo == null) {
             return new ActionError({
-                message:"Name is required",
+                message:"cargo is required",
                 code: "BAD_REQUEST"
             }
         )
         }
         if ( email== null) {
             return new ActionError({
-                message:"Name is required",
+                message:"email is required",
                 code: "BAD_REQUEST"
             }
         )
         }
 
-    console.log("username", name);
+    console.log("name", name, "cargo", cargo, "email", email, "select", select, "comentarios", comentarios);
     const Message = `Hello ${name}, welcome to Astro Actions! con el cargo ${cargo} y el correo ${email} que necesitas para ${select.join(", ")}. Comentarios: ${comentarios || "Ninguno"}.`;
      return Message
     }

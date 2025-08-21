@@ -1,18 +1,16 @@
-// src/lib/api/value.ts
-import type { Contacto } from "@/lib/types/contacto";
+import type { Contacto } from "../types/contacto";
 
-export async function createNewContacto(data: Contacto, email: string) {
-  const response = await fetch("https://tu-backend.com/api/contacto", {
+const URI = "http://localhost:8000";
+
+// Función para crear un nuevo contacto
+export const createNewContacto = async (contacto: Contacto) => {
+  const response = await fetch(`${URI}/contacto`, {  // o /user si es tu endpoint
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "X-User-Email": email, // si tu API necesita este header
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(contacto)
   });
 
-  return {
-    status: response.status,
-    data: await response.json().catch(() => ({})),
-  };
-}
+  return response.json(); // Devuelve lo que el backend responda
+};

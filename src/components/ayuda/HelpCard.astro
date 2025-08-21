@@ -4,10 +4,9 @@ import Button from '../Button.astro';
 type Props = {
 	title: string;
 	titleClass?: string;
-	body: string;
 };
 
-let { title, body, titleClass } = Astro.props;
+let { title, titleClass,  } = Astro.props;
 ---
 
 <div
@@ -15,9 +14,9 @@ let { title, body, titleClass } = Astro.props;
 	<h2 class:list={['text-xl font-semibold text-center', titleClass]}>
 		{title}
 	</h2>
-	<p class="flex-1 text-[15px] leading-[20px] text-foreground/80 text-pretty">
-		{body}
-	</p>
-
+	
+	<div class="flex-1 text-[15px] leading-[20px] text-foreground/80 space-y-2">
+   		 <slot />
+  	</div>
 	<Button label="Contactar equipo Mapache" />
 </div>

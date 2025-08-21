@@ -2,26 +2,6 @@
 import Ayuda from '@/components/ayuda/Ayuda.astro';
 import HelpCard from './ayuda/HelpCard.astro';
 
-let AyudasCards = [
-	{
-		title: 'Diseño de onboarding',
-		body: ' Dar la bienvenida adecuada, con lineamientos y manuales claros con obligaciones y responsabilidades bien definidas, perminte al colaborador integrarse con confianza al equipo, comprender su rol desde inicio y alinearse con los procesos de la empresa fortaleciendo la cultura organizacional y el desempeño desde el primer dia.',
-		titleClass: 'text-[#7b8c42]',
-	},
-	{
-		title: 'Diseño de embajador de Marca',
-		body: 'Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia de tu atención excepcional, gestiona la agenda de reservaciones, comunica promociones y crea conexiones memorables con tus clientes. Eleva la experiencia y fortalece la identidad de tu marca desde el primer contacto.',
-		titleClass: 'text-[#8987c0]',
-	},
-	// {
-	// 	title: 'Capacitación para nuevos colaboradores',
-	// 	letter: 'h',
-	// },
-	// {
-	// 	title: 'Asistentes Virtuales IA para Negocios',
-	// 	letter: 'j ',
-	// },
-];
 ---
 
 <main>
@@ -30,13 +10,62 @@ let AyudasCards = [
 			>Te ayudamos con:</h1
 		>
 		<div class="grid place-items-center grid-cols-1 md:grid-cols-2 gap-6">
-			{
-				AyudasCards.map(function (info) {
-					return <HelpCard {...info} />;
-					// return <Ayuda title={Ayudacard.title} letter={Ayudacard.letter} />;
-				})
-			}
+			<HelpCard title="Diseño de onboarding" titleClass="text-[#7b8c42]">
+  				<p>
+  				  Dar la bienvenida adecuada, con lineamientos y manuales claros con obligaciones y responsabilidades bien definidas, 
+				  perminte al colaborador integrarse con confianza al equipo, comprender su rol desde inicio 
+				  y alinearse con los procesos de la empresa fortaleciendo la cultura organizacional y el desempeño desde el primer dia.
+  				</p>
+			</HelpCard>
+
+			<HelpCard title="Diseño de embajador de Marca" titleClass="text-[#8987c0]">
+  				<p>
+					Un asistente clave que atiende, informa y represente los valores, el servicio y la esencia de tu atención excepcional, 
+					gestiona la agenda de reservaciones, comunica promociones y crea conexiones memorables con tus clientes. 
+					Eleva la experiencia y fortalece la identidad de tu marca desde el primer contacto.
+				</p>
+			</HelpCard>
+
+			<HelpCard title="Capacitación para nuevos colaboradores" titleClass="text-[#7b8c42]">
+  				<p class="font-bold">
+  				  Integración con sistemas existentes:
+  				</p>
+  				<ul class="list-none">
+  				  <li class="before:content-['-'] before:mr-1">Bienvenida y presentación del restaurante (historia,concepto.valores)</li>
+  				  <li class="before:content-['-'] before:mr-1">Organigrama y estructura jerárquica</li>
+  				  <li class="before:content-['-'] before:mr-1">Politicas internas y código de conducta</li>
+				  <li class="before:content-['-'] before:mr-1">Capacitación operativa por área</li>
+				  <li class="before:content-['-'] before:mr-1">Reporte de asistencias y cumplimiento de tareas</li>
+				  <li class="before:content-['-'] before:mr-1">Conexión a base de datos empresariales</li>
+				  <li class="before:content-['-'] before:mr-1">Integración con CRM, ERP, POS y otros sistemas</li>
+				  <li class="before:content-['-'] before:mr-1">Acceso a inventarios y catálogos en tiempo real</li>
+  				</ul>
+			</HelpCard>
+
+			<HelpCard title="Asistentes Virtuales IA para Negocios" titleClass="text-[#8987c0]">
+  				<p class="font-bold">
+  				  Atención al cliente:
+  				</p>
+  				<ul class="list-none">
+  				  <li class="before:content-['-'] before:mr-1">Manejo de reservaciones</li>
+  				  <li class="before:content-['-'] before:mr-1">Difusión de eventos</li>
+  				  <li class="before:content-['-'] before:mr-1">Programa de lealtad</li>
+				  <li class="before:content-['-'] before:mr-1">Conocimiento del menú</li>
+  				</ul>
+				<p class="font-bold">
+					Capacidades Técnicas:
+				</p>
+				<ul class="list-none">
+  				  <li class="before:content-['-'] before:mr-1">Lectura y análisis de parrafos</li>
+  				  <li class="before:content-['-'] before:mr-1">Respuestas en texto y voz</li>
+  				  <li class="before:content-['-'] before:mr-1">Interpretación de documentos</li>
+				  <li class="before:content-['-'] before:mr-1">Identidad visual acorde a la marca</li>
+				  <li class="before:content-['-'] before:mr-1">Voz personalizada con el tono adecuado para la marca</li>
+				  <li class="before:content-['-'] before:mr-1">Personalidad y estilo comunicativo ajustado a cada negocio</li>
+  				</ul>
+			</HelpCard>
 		</div>
+		
 	</section>
 </main>
 

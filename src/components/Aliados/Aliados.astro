@@ -1,7 +1,11 @@
 ---
 import Mayam from '../../assets/mapache 2.png';
 import Button from '../Button.astro';
+import { actions } from "astro:actions";
+const { SaveFormAction } = actions;
 ---
+
+
 <main class="px-20 max-w-full min-w-0 m-8 p-8 text-sm">
     <section id="aliados" class="w-full px-4 space-y-8 gap-8">
     <h1 class="text-4xl leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
@@ -19,18 +23,18 @@ import Button from '../Button.astro';
         <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
     </div>
    
-        <form class=" h-[auto] w-[220px] ml-auto mr-auto m-2 space-y-4"  id="formulario">
+        <form method="POST" action={SaveFormAction} class=" h-[auto] w-[220px] ml-auto mr-auto m-2 space-y-4"  id="formulario">
     
     <label>Con quien tenemos el gusto</label>
-    <input type="text" name="nombre" placeholder="Nombre Completo" />
+        <input type="text" name="nombre" placeholder="Nombre Completo" required/>
     <label>Cargo empresarial</label>
-    <input type="text" name="cargo" placeholder="Dueño de negocio" />
+        <input type="text" name="cargo" placeholder="Dueño de negocio" required/>
     <label>Correo electrónico</label>
-    <input type="email" name="correo" placeholder="@" />
+        <input type="email" name="correo" placeholder="@" required/>
   
     <div>
         <label>Ingresa tus datos</label>
-          <select name="formulario" class="text-foreground/70  text-[12px] w-full border-2 rounded-b p-1" >
+          <select name="servicios" class="text-foreground/70  text-[12px] w-full border-2 rounded-b p-1" >
               <option>Servicio Mapache</option>
               <option>Innovación Empresarial</option>
               <option>Diseño de Branding</option>
@@ -49,7 +53,7 @@ import Button from '../Button.astro';
     </div>
     
     <Button label="Enviar" />
-   
+    <p id="form-message" class="hidden mt-2 font-semibold"></p>
 </form>
    
         </section>
@@ -92,3 +96,37 @@ import Button from '../Button.astro';
         border: 1px solid #ccc;
     }
 </style>
+<script>
+
+    import { actions } from "astro:actions";
+  const { SaveFormAction } = actions;
+
+  const formElement = document.getElementById("formulario") as HTMLFormElement;
+  const messageElement = document.getElementById("form-message") as HTMLFormElement;
+
+  formElement?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    messageElement.style.display = "none";
+    messageElement.textContent = "";
+
+    const form = new FormData(formElement);
+
+    const { data: response, error } = await SaveFormAction(form);
+
+    if (error) {
+      console.error("Error:", error);
+      messageElement.style.display = "block";
+      messageElement.className = "text-red-600 font-semibold mt-2";
+      messageElement.textContent = "Ocurrió un error, intenta de nuevo.";
+      return;
+    }
+
+    
+    formElement.reset();
+    messageElement.style.display = "block";
+    messageElement.className = "text-green-600 font-semibold mt-2";
+    messageElement.textContent = "Tus datos han sido registrados.";
+  });
+
+</script>

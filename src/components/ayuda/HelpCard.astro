@@ -11,7 +11,7 @@ type Props = {
 	list2?: string[];
 };
 
-let { title, body, titleClass, strong, strong2, list, list2, } = Astro.props;
+let { title, body, titleClass, strong, strong2, list, list2 } = Astro.props;
 ---
 
 <div
@@ -22,21 +22,32 @@ let { title, body, titleClass, strong, strong2, list, list2, } = Astro.props;
 	<p class="flex-1 text-[15px] leading-[22px] text-foreground/80 text-pretty">
 		{body}
 	</p>
-	
-	 <ul class="list-none flex flex-col ">
-		<strong class="text-foreground/80 pb-2">
-			{strong}
-		</strong>
-		<li class="flex-1 text-[15px] leading-[22px] text-foreground/80 text-pretty">
-			{list}
-		</li>
-		<strong class="text-foreground/80 pb-2 pt-2 ">
-			{strong2}
-		</strong>
-		<li class="flex-1 text-[15px] leading-[22px] text-foreground/80 text-pretty ">
-			{list2}
-		</li>
-	</ul> 
-	
+
+	{
+		list != null && (
+			<ul class="w-full flex flex-col not-first:space-y-1">
+				<strong class="text-foreground/80 mb-2">{strong}</strong>
+				{list.map((text) => (
+					<li class="flex-1 text-[13px] leading-[18px] text-foreground/80 text-pretty">
+						{text}
+					</li>
+				))}
+			</ul>
+		)
+	}
+
+	{
+		list2 != null && (
+			<ul class="w-full flex flex-col not-first:space-y-1">
+				<strong class="text-foreground/80 mb-2">{strong2}</strong>
+				{list2.map((text) => (
+					<li class="flex-1 text-[13px] leading-[18px] text-foreground/80 text-pretty">
+						{text}
+					</li>
+				))}
+			</ul>
+		)
+	}
+
 	<Button label="Contactar equipo Mapache" />
 </div>

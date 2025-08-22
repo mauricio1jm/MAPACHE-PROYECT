@@ -1,9 +1,9 @@
 ---
 import { actions, } from 'astro:actions';
-import Mayam from '../../assets/mapache 2.png';
+import Mayam from '@/assets/mapache 2.png';
 const result = Astro.getActionResult(actions.createNewContacto)
 ---
-<main class="px-20 max-w-full min-w-0 m-8 p-8 text-sm">
+<main class=" max-w-full min-w-0 pl-20 text-sm">
     <section id="aliados" class="w-full px-4 space-y-8 gap-4">
     <h1 class="text-4xl leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
         Aliados Estrategicos
@@ -24,7 +24,7 @@ const result = Astro.getActionResult(actions.createNewContacto)
     </div>
    
         <form method="POST"   id="formulario" action={actions.createNewContacto}
-        class=" h-[auto] w-[280px] ml-auto mr-auto m-2 space-y-8 items-center">
+        class=" h-[auto] w-[280px] ml-auto mr-auto m-2 space-y-5 ">
     
     <label for="username">Con quien tenemos el gusto</label>
     <input type="text" name="name" placeholder="Nombre Completo" required />
@@ -106,7 +106,7 @@ const result = Astro.getActionResult(actions.createNewContacto)
 import { actions } from "astro:actions";
 
      const form = document.getElementById('formulario') as HTMLFormElement;
-     const mensaje = document.getElementById("mensaje");
+    const toastContainer = document.getElementById("message");
 
     form?.addEventListener ("submit", async (ev) => {
        ev.preventDefault();

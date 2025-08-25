@@ -2,10 +2,10 @@
 import atomos from '../../assets/mapache 1.png';
 import Button from '../Button.astro';
 ---
-<section id="servicios-1" class=" contenedor w-full h-[600px] px-4 flex justify-center gap-4 bg-muted/10">
+<section id="servicios-1" class=" contenedor w-full min-h-[600px] px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 bg-muted/10">
 
 
-    <section class="flex py-16">
+    <section class="flex justify-center w-full md:w-1/2 py-6 md:py-12">
 
       <div class="w-full max-w-sm md:max-w-lg">
         <img src={atomos.src} alt=""
@@ -13,7 +13,7 @@ import Button from '../Button.astro';
       </div>
     </section>
 
-    <section class="w-full max-w-[480px] h-auto grid gap-4 auto-rows-max py-26 m-4 ">
+    <section class="w-full md:w-1/2 max-w-[480px] h-auto grid gap-4 auto-rows-max py-26 m-4 ">
       <h1 class="text-4xl leading-[37px] font-medium text-foreground/60 mb-2">Diseño de servicios</h1>
     
     <p class="text-muted py-6">

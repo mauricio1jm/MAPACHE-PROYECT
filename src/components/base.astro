@@ -1,5 +1,5 @@
 ---
-import HelpCard from '@/components/ayuda/HelpCard.astro';
+import HelpCard from './Ayuda/HelpCard.astro';
 
 let AyudasCards = [
 	{
@@ -47,9 +47,9 @@ let AyudasCards = [
 
 <main>
 	<section id="ayudamos">
-		<h1 class="flex justify-center sm:text-5xl font-bold text-foreground/60 text-4xl pb-16"
-			>Te ayudamos con:</h1>
-		<div class="grid place-items-center grid-cols-1 md:grid-cols-2 gap-y-12">
+		<h1 class="flex justify-center font-bold text-foreground/60 text-5xl"
+			>Te ayudamos con</h1>
+		<div class="grid place-items-center grid-cols-1 md:grid-cols-2 gap-6">
 			{
 				AyudasCards.map(function (info) {
 					return <HelpCard {...info} />;

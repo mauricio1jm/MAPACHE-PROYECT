@@ -4,12 +4,12 @@ import Mayam from '@/assets/mapache 2.png';
 const result = Astro.getActionResult(actions.createNewContacto)
 ---
 <main class=" max-w-full min-w-0 p-8 text-sm">
-    <section id="aliados" class="w-full px-8 space-y-2 gap-4">
+    <section id="aliados" class="w-full px-8 space-y-8 gap-4">
     <h1 class="text-4xl leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
         Aliados Estrategicos
     </h1>
-    <div class="pt-4 m-4">
-        <div class="w-[250px] h-[250px]">
+    <div class="pt-4 ml-6">
+        <div class="w-50  md:w-[250px] h-auto">
             <img src={Mayam.src} alt="mayam">
         </div>
     </div>
@@ -18,7 +18,7 @@ const result = Astro.getActionResult(actions.createNewContacto)
 
     <div class="max-w-md w-[350px] space-y-6 ">
         <h2 class="font-medium text-[#AC8178] text-2xl">Contáctanos</h2>
-        <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 sa ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+        <h1 class="text-3xl sm:text-4xl   md:text-5xl leading-snug sm:leading-tigh text-foreground/60 mb-2 sa ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
        
    
     </div>

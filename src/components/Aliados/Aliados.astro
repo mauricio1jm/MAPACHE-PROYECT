@@ -1,32 +1,30 @@
 ---
 import { actions, } from 'astro:actions';
-import Mayam from '../../assets/mapache 2.png';
-const result = Astro.getActionResult(actions.createNewContacto);
-
- 
+import Mayam from '@/assets/mapache 2.png';
+const result = Astro.getActionResult(actions.createNewContacto)
 ---
-<main class="px-20 max-w-full min-w-0 m-8 p-8 text-sm">
-    <section id="aliados" class="w-full px-4 space-y-8 gap-4">
+<main class=" max-w-full min-w-0 p-8 text-sm">
+    <section id="aliados" class="w-full px-8 space-y-8 gap-4">
     <h1 class="text-4xl leading-[54px] font-bold text-foreground/70 mb-2 p-2 text-center">
         Aliados Estrategicos
     </h1>
-    <div class="pt-4 m-4">
-        <div class="w-[250px] h-[250px]">
+    <div class="pt-4 ml-6">
+        <div class="w-50  md:w-[250px] h-auto">
             <img src={Mayam.src} alt="mayam">
         </div>
     </div>
     
-        <section class="flex flex-wrap items-start justify-center gap-4 p-4 bg- ">
+        <section class="flex flex-wrap items-start gap-4 p-4 bg- ">
 
     <div class="max-w-md w-[350px] space-y-6 ">
         <h2 class="font-medium text-[#AC8178] text-2xl">Contáctanos</h2>
-        <h1 class="text-[46px] leading-[54px] text-foreground/60 mb-2 sa ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
+        <h1 class="text-3xl sm:text-4xl   md:text-5xl leading-snug sm:leading-tigh text-foreground/60 mb-2 sa ">¡Incrementa la <strong class="text-black">experiencia</strong> de tus clientes!</h1>
        
    
     </div>
    
         <form method="POST"   id="formulario" action={actions.createNewContacto}
-        class=" h-[auto] w-[280px] ml-auto mr-auto m-2 space-y-8 items-center">
+        class=" h-[auto] w-[250px] ml-auto mr-auto m-2 space-y-5 ">
     
     <label for="username">Con quien tenemos el gusto</label>
     <input type="text" name="name" placeholder="Nombre Completo" required />
@@ -36,7 +34,7 @@ const result = Astro.getActionResult(actions.createNewContacto);
     <input type="email" name="email" placeholder="@" required/>
     <div>
         <label for="select">Ingresa tus datos</label>
-          <select name="select" class="text-foreground/70  text-[12px] w-full border-2 rounded-b p-1" >
+          <select name="select" class="text-foreground/70  text-[14px] w-full border-2 rounded-b p-1" >
               <option>Servicio Mapache</option>
               <option>Innovación Empresarial</option>
               <option>Diseño de Branding</option>
@@ -62,7 +60,7 @@ const result = Astro.getActionResult(actions.createNewContacto);
    
 </form>
 
-<div id="mensaje" class="text-center text-sm mt-4 p-4 w-full rounded-b border-2 border-muted/70 "></div>
+<div id="mensaje" class="text-center text-sm mt-4 p-4 w-full text-foreground/70  "></div>
    
         </section>
     </section>
@@ -92,7 +90,7 @@ const result = Astro.getActionResult(actions.createNewContacto);
     label{
         color:#9b9898;
 
-        font-size: 10px;
+        font-size: 11px;
        
     }
     option{
@@ -107,21 +105,30 @@ const result = Astro.getActionResult(actions.createNewContacto);
 <script>
 import { actions } from "astro:actions";
 
-     const form = document.getElementById('formulario') as HTMLFormElement;
-     const mensaje = document.getElementById("mensaje");
+const form = document.getElementById("formulario") as HTMLFormElement;
+const mensaje = document.getElementById("mensaje") as HTMLElement;
 
-    form?.addEventListener ("submit", async (ev) => {
-       ev.preventDefault();
-       const formData = new FormData(form);
-       
-     const { data, error } = await actions.createNewContacto(formData);
-    
-    console.log(data);
-    if (mensaje) {
-      mensaje.innerHTML = `✅ ¡Gracias ${formData.get("name")} ! Hemos recibido tu información.`;
-    }
+form?.addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const formData = new FormData(form);
 
-    form.reset();
-    });
+  const { data, error } = await actions.createNewContacto(formData);
+
+  if (mensaje) {
+    if (!error) {
+      mensaje.innerHTML = `¡Gracias ${formData.get("name")}! Hemos recibido tu información.`;
+      mensaje.classList.remove("hidden", "text-red-600");
+     
+    } 
+
+    // Mostrar mensaje por 3 segundos y luego ocultar
+    setTimeout(() => {
+      mensaje.classList.add("hidden");
+    }, 3000);
+  }
+
+  form.reset();
+});
+
 
 </script>

@@ -2,33 +2,29 @@
 import atomos from '../../assets/mapache 1.png';
 import Button from '../Button.astro';
 ---
-<section id="servicios-1" class=" contenedor w-full min-h-[600px] px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 bg-muted/10">
+
+<section id="servicios-1" class="w-full min-h-[600px] px-4 flex flex-col md:flex-row items-center justify-center gap-8 bg-muted/10 ">
+
+ 
+  <div class="flex justify-center w-full md:w-1/2 max-w-full">
+    <div class="w-full max-w-md md:max-w-xl lg:max-w-2xl">
+      <img src={atomos.src} alt="Diseño de servicios" class="w-full object-contain">
+    </div>
+  </div>
 
 
-    <section class="flex justify-center w-full md:w-1/2 py-6 md:py-12">
-
-      <div class="w-full max-w-sm md:max-w-lg">
-        <img src={atomos.src} alt=""
-         class="w-full h-auto object-contain">
-      </div>
-    </section>
-
-    <section class="w-full md:w-1/2 max-w-[480px] h-auto grid gap-4 auto-rows-max py-2 m-4 ">
-      <h1 class="text-4xl leading-[37px] font-medium text-foreground/60 mb-2">Diseño de servicios</h1>
-    
+  <div class="w-full md:w-1/2 max-w-[480px] py-2 m-4">
+    <h1 class="text-4xl leading-[37px] font-medium text-foreground/60 mb-2">
+      Diseño de Servicios
+    </h1>
     <p class="text-muted py-6">
-      Con un enfoque centrado en el usuario, Anticipamos necesidades, resolvemos problemas y creamos momentos memorables alineados a la propuesta de valor de tu marca y las expectativas de tus clientes.
+      Con un enfoque centrado en el usuario, anticipamos necesidades, resolvemos problemas y creamos momentos memorables alineados a la propuesta de valor de tu marca y las expectativas de tus clientes.
     </p>
+    
+    <div class="pt-10">
+      <Button label="Contactar equipo Mapache" />
+    </div>
+    
+  </div>
 
-     <section class="pt-16 pl-5">
-      <Button label="Contactar Equipo Mapache."/>
 </section>
-
-
-<style>
-  .contenedor {
-   
-    padding: 20px;
-  }
-  
-</style>

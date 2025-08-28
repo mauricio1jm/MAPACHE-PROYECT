@@ -2,36 +2,42 @@
 import Button from "../Button.astro"
 ---
 
-<section id="indicadores" class="p-24 max-w-full">
-  <div class="flex flex-wrap justify-between items-center">
-    <div class="p-2">
-      <h1 class="text-[#8987c0] text-5xl font-bold">
+<section id="indicadores" class="px-4 sm:px-10 py-12 sm:py-20 max-w-full mt-2 mb-2">
+  <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-center">
+    
+    <div class="p-4 md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
+      <h1 class="text-[#8987c0] text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug">
         5 indicadores <br />de que necesitas <br />Diseño de Servicios
       </h1>
-      <ol
-        class="list-decimal text-[#7d7d7d] font-light text-2xl leading-10 p-6"
-      >
+
+      <ol class="list-decimal text-[#7d7d7d] font-light text-lg sm:text-xl md:text-2xl leading-8 sm:leading-10 p-4 sm:p-6 text-left">
         <li>Alta rotación de personal.</li>
         <li>Intervención del dueño de negocio en la <br> operación.</li>
-        <li>
-          Cuellos de botella par atender o dar <br> seguimiento a los clientes.
-        </li>
+        <li>Cuellos de botella para atender o dar <br> seguimiento a los clientes.</li>
         <li>Inconsistencia con los clientes.</li>
         <li>Dependencia excesiva de ciertos empleados.</li>
       </ol>
-      <div>
+
+      <div class="mt-4">
+        <Button 
+          label="Saber más" 
+          bgColor="bg-boton-indicadores" 
+          textColor="text-texBoton" 
+          icon="/src/assets/linkedin-logo-design-30.webp"
+        ></Button>
       </div>
-      
-      <Button label="Saber más" bgColor="bg-boton-indicadores" textColor="text-texBoton" icon="/src/assets/linkedin-logo-design-30.webp"></Button>
     </div>
-    <div class="p-2">
-      <img
-        class="w-[450px] h-[450px] rounded-full object-cover"
-        src="/src/assets/pexels-marcus-queiroga-silva-86421404-19595138.png"
-        alt="img indicadores"
-      />
+
+    
+    <div class="w-40 h-40 sm:w-56 sm:h-56 md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden mx-auto md:mx-0 mb-6 md:mb-0">
+      <img src="/src/assets/pexels-marcus-queiroga-silva-86421404-19595138.png" 
+           alt="indicadores" 
+           class="w-full h-full object-cover" />
     </div>
+
   </div>
 </section>
 
-<style></style>
+
+
+

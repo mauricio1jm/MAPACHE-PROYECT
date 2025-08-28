@@ -2,7 +2,7 @@
 import logo from '../../assets/logo2.png';
 ---
 
-<header class=" flex justify-between items-center px-4 sm:px-8 lg:px-14 py-4 relative">
+<header class=" flex justify-between items-center sm:px-8 lg:px-14 relative">
 
 <img src={logo.src} alt="Mapache Logotipo" class="w-[180px] sm:w-[220px] md:w-[280px] h-auto" />
 
@@ -12,7 +12,10 @@ import logo from '../../assets/logo2.png';
 
 <input type="checkbox" id="menu-sanwich" class="hidden peer" />
 
- <nav class="absolute lg:static top-[100px] lg:top-auto right-0 lg:right-auto mt-0 lg:mt-0 w-48 sm:w-56 lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none px-4 py-3 lg:px-0 lg:py-0 hidden peer-checked:block lg:block rounded-xl lg:rounded-none z-50">
+<label for="menu-sanwich" class="fixed inset-0 bg-black/30 hidden peer-checked:block lg:hidden z-40">
+</label>
+
+ <nav class="absolute lg:static top-[70px] right-[1rem] lg:top-auto lg:right-auto mt-0 lg:mt-0 w-48 sm:w-56 lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none px-4 py-3 lg:px-0 lg:py-0 hidden peer-checked:block lg:block rounded-xl lg:rounded-none z-50">
   <ul class="flex flex-col lg:flex-row gap-2 lg:gap-6 text-sm lg:text-base text-foreground/70 font-medium">
 			<li><a href="#inicio">Inicio</a></li>
 			<li><a href="#servicios-1">Quienes Somos</a></li>
